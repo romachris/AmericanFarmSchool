@@ -1,0 +1,252 @@
+<div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="js/jsPDF/dist/jspdf.min.js"></script>
+
+
+    <div id="report">
+        <div class="d-flex justify-content-center">
+            <div id="attributes">
+                <br>
+                <h2 style="text-align:center;float:center">Καλλιέργεια: <a id="product"> </a></h2><br>
+                <br>
+                <br>
+                <br>
+                <h2 style="text-align: center; font-weight: 600">ΔΕΔΟΜΕΝΑ ΕΔΑΦΟΑΝΑΛΥΣΗΣ</h2><br>
+
+                <div id="container">
+                    <table class="table">
+                        <thead>
+                            <td colspan="9" style="color: grey;text-align: center; font-weight: 800 ;border-right: solid 2px grey; border-left: solid 2px grey;
+                            border-top: solid 2px grey; border-bottom: solid 2px #930077">Αποτελέσματα Φυσικοχημικων
+                                αναλησεων</td>
+                        </thead>
+                        <thead class="tablehead">
+                            <td style="width: 15%; border-right: solid 2px #930077; border-left: solid 2px #930077">
+                                Ουσίες</td>
+                            <td style="width: 4%" class="tdborder">Άμμος</td>
+                            <td style="width: 5%" class="tdborder">Άργιλλος</td>
+                            <td style="width: 4%" class="tdborder">Ιλύς</td>
+                            <td style="width: 17%" class="tdborder">Οξύτητα Εδάφους</td>
+                            <td style="width: 10%" class="tdborder">Αλατότητα Εδάφους</td>
+                            <td style="width: 16%" class="tdborder">Οργανική Ουσία</td>
+                            <td style="width: 14%" class="tdborder">Ολικό CaCO3</td>
+                            <td style="width: 15%" class="tdborder">Ενεργό CaCO3</td>
+                        </thead>
+
+                        <thead class="tablehead">
+                            <td style="border-right: solid 2px #930077; border-left: solid 2px #930077">Μέτρηση</td>
+                            <td class="tdborder">%</td>
+                            <td class="tdborder">%</td>
+                            <td class="tdborder">%</td>
+                            <td class="tdborder">pH</td>
+                            <td class="tdborder">mS/cm</td>
+                            <td class="tdborder">%</td>
+                            <td class="tdborder">%</td>
+                            <td class="tdborder">%</td>
+                        </thead>
+                        <thead class="tablehead">
+                            <td
+                                style="font-weight: 600; border-right: solid 2px #930077; border-left: solid 2px #930077">
+                                Αποδεκτά Όρια</td>
+                            <td style="font-weight: 600" class="tdborder">-</td>
+                            <td style="font-weight: 600" class="tdborder">-</td>
+                            <td style="font-weight: 600" class="tdborder">-</td>
+                            <td style="font-weight: 600" class="tdborder">1.0 - 14.0</td>
+                            <td style="font-weight: 600" class="tdborder">
+                                < 2</td> <td style="font-weight: 600" class="tdborder">1.0 - 2.0
+                            </td>
+                            <td style="font-weight: 600" class="tdborder">
+                                < 10%</td> <td style="font-weight: 600" class="tdborder">
+                                    < 5%</td> </thead> <tbody class="tablehead">
+                            <td style="border-right: solid 2px #930077; border-left: solid 2px #930077">Τιμή Εδάφους
+                            </td>
+                            <td id="sand" class="tdborder"></td>
+                            <td id="clay" class="tdborder"></td>
+                            <td id="sludge" class="tdborder"></td>
+                            <td id="phValue" class="tdborder"></td>
+                            <td id="saltines" class="tdborder"></td>
+                            <td id="organicValue" class="tdborder"></td>
+                            <td id="CaCO3" class="tdborder"></td>
+                            <td id="activeCaCO3" class="tdborder"></td>
+                            </tbody>
+                        <tfoot class="tablehead" style="border-bottom: solid 2px #930077">
+                            <td style="border-right: solid 2px #930077; border-left: solid 2px #930077">Περιγραφή</td>
+                            <td id="sandResult" class="tdborder"></td>
+                            <td id="clayResult" class="tdborder"></td>
+                            <td id="sludgeResult" class="tdborder"></td>
+                            <td id="phValueResult" class="tdborder"></td>
+                            <td id="saltinesResult" class="tdborder"></td>
+                            <td id="organicValueResult" class="tdborder"></td>
+                            <td id="CaCO3Result" class="tdborder"></td>
+                            <td id="activeCaCO3Result" class="tdborder"></td>
+                        </tfoot>
+                    </table>
+                    <br>
+                </div>
+
+                <div id="container">
+                    <table class="table">
+                        <thead>
+                            <td colspan="6" style="color: grey;text-align: center; font-weight: 800 ;border-right: solid 2px grey; border-left: solid 2px grey;
+                                border-top: solid 2px grey; border-bottom: solid 2px #930077">Περιεκτικότητα
+                                Μακροθρεπτικών ουσιών</td>
+                        </thead>
+                        <thead class="tablehead">
+                            <td style="width: 15%; border-right: solid 2px #930077; border-left: solid 2px #930077">
+                                Ουσίες</td>
+                            <td style="width: 20%" class="tdborder">Νιτρικό άζωτο (Νo3-N)</td>
+                            <td style="width: 15%" class="tdborder">Φώσφορος</td>
+                            <td style="width: 10%" class="tdborder">Καλιο</td>
+                            <td style="width: 20%" class="tdborder">Εναλάσιμο Μαγνήσιο Mg</td>
+                            <td style="width: 20%" class="tdborder">Εναλάσιμο ασβέστιο Ca</td>
+                        </thead>
+                        <thead class="tablehead">
+                            <td style="border-right: solid 2px #930077; border-left: solid 2px #930077">Μέτρηση</td>
+                            <td class="tdborder">ppm</td>
+                            <td class="tdborder">ppm</td>
+                            <td class="tdborder">ppm</td>
+                            <td class="tdborder">ppm</td>
+                            <td class="tdborder">ppm</td>
+                        </thead>
+                        <thead class="tablehead">
+                            <td
+                                style="font-weight: 600; border-right: solid 2px #930077; border-left: solid 2px #930077">
+                                Αποδεκτά Όρια</td>
+                            <td style="font-weight: 600" class="tdborder">20 - 40</td>
+                            <td style="font-weight: 600" class="tdborder">13 - 25</td>
+                            <td style="font-weight: 600" class="tdborder">95 - 255</td>
+                            <td style="font-weight: 600" class="tdborder">64 - 115</td>
+                            <td style="font-weight: 600" class="tdborder">300 - 750</td>
+                        </thead>
+                        <tbody class="tablehead">
+                            <td style="border-right: solid 2px #930077; border-left: solid 2px #930077">Τιμή Εδάφους
+                            </td>
+                            <td id="nitricValue" class="tdborder"></td>
+                            <td id="phosphorus" class="tdborder"></td>
+                            <td id="kaliumValue" class="tdborder"></td>
+                            <td id="alt_manganese" class="tdborder"></td>
+                            <td id="calciumValue" class="tdborder"></td>
+                        </tbody>
+                        <tfoot class="tablehead" style="border-bottom: solid 2px #930077">
+                            <td style="border-right: solid 2px #930077; border-left: solid 2px #930077">Περιγραφή</td>
+                            <td id="nitricValueResult" class="tdborder"></td>
+                            <td id="phosphorusResult" class="tdborder"></td>
+                            <td id="kaliumValueResult" class="tdborder"></td>
+                            <td id="alt_manganeseResult" class="tdborder"></td>
+                            <td id="calciumValueResult" class="tdborder"></td>
+                        </tfoot>
+                    </table>
+                </div>
+                <br>
+
+                <div id="container">
+                    <table class="table">
+                        <thead>
+                            <td colspan="6" style="color: grey;text-align: center; font-weight: 800; border-right: solid 2px grey; border-left: solid 2px grey;
+                            border-top: solid 2px grey; border-bottom: solid 2px #930077">Περιεκτικότητα Μικροθρεπτικών
+                                Ουσιών</td>
+
+
+                        </thead>
+                        <thead class="tablehead">
+                            <td style="width: 15%; border-right: solid 2px #930077; border-left: solid 2px #930077">
+                                Ουσίες</td>
+                            <td style="width: 20%" class="tdborder">Σίδηρο Fe</td>
+                            <td style="width: 20%" class="tdborder">Ψευδάργυρος Zn</td>
+                            <td style="width: 20%" class="tdborder">Μαγγάνιο Mn</td>
+                            <td style="width: 15%" class="tdborder">Χαλκός Cu</td>
+                            <td style="width: 10%" class="tdborder">Βόριο B</td>
+                        </thead>
+                        <thead class="tablehead">
+                            <td style="border-right: solid 2px #930077; border-left: solid 2px #930077">Μέτρηση</td>
+                            <td class="tdborder">ppm</td>
+                            <td class="tdborder">ppm</td>
+                            <td class="tdborder">ppm</td>
+                            <td class="tdborder">ppm</td>
+                            <td class="tdborder">ppm</td>
+                        </thead>
+                        <thead class="tablehead">
+                            <td
+                                style="font-weight: 600; border-right: solid 2px #930077; border-left: solid 2px #930077">
+                                Αποδεκτά Όρια</td>
+                            <td style="font-weight: 600" class="tdborder">7.0 - 25.0</td>
+                            <td style="font-weight: 600" class="tdborder">1.0 - 2.5</td>
+                            <td style="font-weight: 600" class="tdborder">15.0 - 25.0</td>
+                            <td style="font-weight: 600" class="tdborder">0.8 - 1.5</td>
+                            <td style="font-weight: 600" class="tdborder">0.5 - 1.0</td>
+                        </thead>
+                        <tbody class="tablehead">
+                            <td style="border-right: solid 2px #930077; border-left: solid 2px #930077">Τιμή Εδάφους
+                            </td>
+                            <td class="tdborder" id="iron"></td>
+                            <td class="tdborder" id="zinc"></td>
+                            <td class="tdborder" id="manganese"></td>
+                            <td class="tdborder" id="copper"></td>
+                            <td class="tdborder" id="borium"></td>
+                        </tbody>
+                        <tfoot class="tablehead" style="border-bottom: solid 2px #930077">
+                            <td style="border-right: solid 2px #930077; border-left: solid 2px #930077">Περιγραφή</td>
+                            <td class="tdborder" id="ironResult"></td>
+                            <td class="tdborder" id="zincResult"></td>
+                            <td class="tdborder" id="manganeseResult"></td>
+                            <td class="tdborder" id="copperResult"></td>
+                            <td class="tdborder" id="boriumResult"></td>
+
+
+                        </tfoot>
+                    </table>
+
+                </div>
+                <p class="container" id="advice"></p>
+            </div>
+
+        </div>
+        <div class="d-flex justify-content-center">
+            <div id="chart-container" style="width: 595px;">
+                <canvas id="ctx"></canvas>
+            </div><br>
+            <div id="chart-container" style="width: 595px;">
+                <canvas id="ctx2"></canvas>
+            </div><br>
+        </div>
+    </div>
+    <!-- <p id="advice"></p> -->
+    <br>
+
+    <div id="elementH"></div>
+    <div class="d-flex justify-content-center">
+        <button onclick="saveAsPDF();">Download as PDF</button>
+        <button onclick="myFunction()">Save to Reports</button>
+    </div>
+
+    <div id="myDIV" style="display: none">
+        <br>
+        <span>Please name your report</span><br>
+        <input id="reportName" type="text" name="fname" required><br>
+        <button id="save_Report">Save Report</button>
+    </div>
+
+</div>
+<script>
+    //pdf save btn
+    function saveAsPDF() {
+        var doc = new jsPDF();
+        var elementHTML = $('#report').html();
+        var specialElementHandlers = {
+            '#elementH': function (element, renderer) {
+                return true;
+            }
+        };
+        
+        html2canvas(document.getElementById("report"), {
+            onrendered: function (canvas) {
+                var img = canvas.toDataURL(); //image data of canvas
+                doc.addImage(img, 0, 0, 200,200);
+                doc.save('report.pdf');
+
+            }
+        });
+    }
+</script>

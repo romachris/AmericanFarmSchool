@@ -1,0 +1,36 @@
+<nav id="loggedin" class="site-navigation position-relative text-left" role="navigation">
+    
+    
+    
+    <ul class="site-menu main-menu js-clone-nav mx-auto d-none pl-0 d-lg-block border-none">
+        <li><a href="index.html" class="nav-link text-left">Home</a></li>
+        <!-- <li class="active"><a href="index.html" class="nav-link text-left">Home</a></li> -->
+        <li><a href="about.html" class="nav-link text-left">About</a></li>
+        <li><a href="contact.html" class="nav-link text-left">Contact</a></li>
+        <li id="reports"><a href="reports.html" class="nav-link text-left">Reports</a></li>
+        <li id="formbtn"><a href="form.html" class="nav-link text-left">Input Data</a></li>
+        <label class="WelcLblPos">
+            <li style="list-style-type: none; margin-top: -20px" id="account"><a class="nav-link text-left"><span id="accountName"></span></a></li>
+        </label>
+        <label class="logoutLblPos">    
+            <li style="list-style-type: none; display: inline" id="account"><a href="login.html" class="nav-link text-left">Account </a></li>
+            <li style="list-style-type: none; display: inline;" id="logout" onclick="logout()"><a href="index.html" class="nav-link text-left">Log Out</a></li>
+        </label>
+
+    </ul>
+   
+</nav>
+<script>
+    var user = firebase.auth().currentUser;
+    var displayName = user.displayName;
+    document.getElementById("accountName").innerHTML = "Welcome " + displayName;
+    firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+            // User is signed in.
+            var user = firebase.auth().currentUser;
+            var displayName = user.displayName;
+            document.getElementById("accountName").innerHTML = "Welcome " + displayName;
+
+        }
+    });
+</script>

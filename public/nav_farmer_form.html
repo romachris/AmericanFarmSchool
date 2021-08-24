@@ -1,0 +1,84 @@
+<fieldset id="first">
+        <legend style="color: #444242; font-weight: 600" >Καλλιέργεια</legend>
+        <select class="form-control" name="product" required>
+            <option disabled selected value> -- select an option -- </option>
+            <option value="Αμπελώνας">Αμπελώνας</option>
+            <option value="Καστανιά">Καστανιά</option>
+        </select>
+        <hr>
+
+    
+        <legend style="color: #444242; font-weight: 600" >PH (0-14)</legend>
+        <input class="form-control" type="number" step="0.25" min="0" max="14" name="ph" required>
+        <br>
+        <hr>
+    
+            
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend style="color: #444242; font-weight: 600">Γενικές Φυσιοχημικές Ιδιότητες του Εδάφους</legend>
+        Άμμος:<br>
+        <input class="form-control" type="number" placeholder="0" step="0.1" min="0" max="50" name="sand" value="0">
+        <br>
+        Άργιλλος:<br>
+        <input class="form-control" type="number" placeholder="0"  step="0.1" min="0" max="50" name="clay" value="0">
+        <br>
+        Ίλυς:<br>
+        <input class="form-control" type="number" placeholder="0"  step="0.1" min="0" max="50" name="sludge" value="0">
+        <br>
+        Αλλατότητα εδάφους:<br>
+        <input class="form-control" type="number" placeholder="0"  step="0.1" min="0" max="50" name="saltines" value="0">
+        <br>
+        Οργανική Ουσία:<br>
+        <input class="form-control" type="number" placeholder="0"  step="0.1" min="0" max="50" name="organic_material" value="0">
+        <br>
+        Oλικό CaCO3:<br>
+        <input class="form-control" type="number" placeholder="0"  step="0.1" min="0" max="50" name="CaCO3" value="0">
+        <br>
+        Ενεργό CaCO3:<br>
+        <input class="form-control" type="number" placeholder="0"  step="0.1" min="0" max="50" name="activeCaCO3" value="0">
+        <br>
+    </fieldset>
+    <hr>
+    <fieldset>
+        <legend style="color: #444242; font-weight: 600">Περιεκτικότητα Μακροθρεπτικών Ουσιών</legend>
+    
+        Νιτρικό άζωτο (Νo3-N):<br>
+        <input class="form-control" type="number" placeholder="0"  step="0.10" min="0" max="50" name="nitric_oxide" value="0">
+        <br>
+        Φώσφορος:<br>
+        <input class="form-control" type="number" placeholder="0"  step="0.10" min="0" max="50" name="phosphorus" value="0">
+        <br>
+        Καλιο:<br>
+        <input class="form-control" type="number" placeholder="0"  step="0.10" min="0" max="50" name="kalium" value="0">
+        <br>
+        Εναλάσιμο Μαγνήσιο Mg:<br>
+        <input class="form-control" type="number" placeholder="0"  step="0.10" min="0" max="50" name="alt_manganese" value="0">
+        <br>
+        Εναλάσιμο ασβέστιο Ca<br>
+        <input class="form-control" type="number" placeholder="0"  step="0.10" min="0" max="50" name="calcium" value="0">
+        <br>
+    </fieldset>
+    <hr>
+    <fieldset>
+        <legend style="color: #444242; font-weight: 600">Περιεκτικότητα Μικροθρεπτικών Ουσιών</legend>
+        Σίδηρο Fe:<br>
+        <input class="form-control" type="number" placeholder="0" step="0.10" min="0" max="50" name="iron" value="0">
+        <br>
+        Ψευδάργυρος Zn:<br>
+        <input class="form-control" type="number" placeholder="0" step="0.10" min="0" max="50" name="zinc" value="0">
+        <br>
+        Μαγγάνιο Mn:<br>
+        <input class="form-control" type="number" placeholder="0" step="0.10" min="0" max="50" name="manganese" value="0">
+        <br>
+        Χαλκός Cu:<br>
+        <input class="form-control" type="number" placeholder="0" step="0.10" min="0" max="50" name="copper" value="0">
+        <br>
+        Βόριο B:<br>
+        <input class="form-control" type="number" placeholder="0" step="0.10" min="0" max="50" name="borium" value="0">
+        <br>
+        <hr>
+    
+        <input class="btn btn-primary" type="submit" value="Submit" id="submitForm">
+    </fieldset>

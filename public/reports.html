@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>American Farm School</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700|Montserrat:400,700|Roboto&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+    <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/jsPDF/dist/jspdf.min.js"></script>
+
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <link rel='stylesheet' type='text/css' href='/resources/tutorial/css/example.css'>
+    <script src="js/jquery_popup.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js">
+    </script>
+
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+    <div class="site-wrap">
+
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+
+
+
+        <div class="header-top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 text-center">
+                        <a href="index.html" class="site-logo">
+                            <img src="images/logo.png" alt="Image" class="img-fluid">
+                        </a>
+                    </div>
+                    <a href="#"
+                        class="mx-auto d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
+                            class="icon-menu h3"></span></a>
+                </div>
+            </div>
+
+            <div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 d-lg-block" role="banner">
+
+                <div class="container">
+                    <div class="d-flex align-items-center">
+
+                        <div class="mx-auto">
+                            <div id="navigation"></div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <br>
+            <br>
+            <div id="display_report"></div>
+            <div class="table-responsive">
+                <table id="myTable" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <!-- <th scope="col">#</th> -->
+                            <th scope="col">Report Title</th>
+                            <th scope="col">Product</th>
+                            <th scope="col">Report Submission Date</th>
+                            <th scope="col">View</th>
+                            <th scope="col">Delete</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="ex-table">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-12 text-center">
+                <ul class="pagination pagination-lg pager" id="myPager"></ul>
+            </div>
+        </div>
+        <div id="reportView" class="container"></div>
+        <div class="footer">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/AmericanFarmSchool.Greece/"><span
+                                    class="icon-facebook"></span></a>
+                            <a href="https://www.youtube.com/user/AmericanFarmSchool?feature=mhee"><span
+                                    class="icon-youtube"></span></a>
+                            <a href="https://www.instagram.com/americanfarmschool/"><span
+                                    class="icon-instagram"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="copyright">
+                            <p>
+                                Copyright &copy;
+                                <script>
+                                    document.write(new Date().getFullYear());
+                                </script> All rights reserved | This template is made by <a
+                                    href="https://exandia.com/" target="_blank">Exandia</a>
+                            </p>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- .site-wrap -->
+
+
+    <!-- loader -->
+    <!-- <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#ff5e15" /></svg></div> -->
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/jquery.mb.YTPlayer.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js">
+    </script>
+
+
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-firestore.js"></script>
+    <script src="js/firebase.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#config-web-app -->
+
+
+
+    <!-- <script src="js/login.js"></script> -->
+    <script src="js/menu.js"></script>
+    <script src="js/report_data.js"></script>
+    <script src="js/get_reports.js"></script>
+
+
+</body>
+
+</html>
